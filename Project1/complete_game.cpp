@@ -274,7 +274,7 @@ int main() {
     ChooseTex.loadFromFile("pictures/choose.png");
     buyy.loadFromFile("pictures/buy.png");
     clockTex.loadFromFile("pictures/clock.png");
-    clockwiseTex.loadFromFile("picutres/clockwise.png");
+    clockwiseTex.loadFromFile("pictures/clockwise.png");
     BackgroundTex.loadFromFile("pictures/background.jpg");
     rightwallTex1.loadFromFile("pictures/rightwall1.jpg");
     leftwallTex1.loadFromFile("pictures/leftwall1.jpg");
@@ -580,7 +580,7 @@ int main() {
     menusound.setVolume(50.0f);
 
 
-    playbuffer.loadFromFile("play.wav");
+    playbuffer.loadFromFile("sounds/play.wav");
     playsound.setBuffer(playbuffer);
     playsound.setVolume(200.0f);
 
@@ -2008,9 +2008,9 @@ void chooseplayer(bool& endstart, int& countperson, bool& isedit, bool& isdelete
 
     Sprite Peter, Poor, Patrek;
     Texture petertext, poortext, patrektext;
-    petertext.loadFromFile("HERO1.png");
-    poortext.loadFromFile("HERO2.png");
-    patrektext.loadFromFile("HERO3.png");
+    petertext.loadFromFile("pictures/HERO1.png");
+    poortext.loadFromFile("pictures/HERO2.png");
+    patrektext.loadFromFile("pictures/HERO3.png");
     Peter.setTexture(petertext);
     Poor.setTexture(poortext);
     Patrek.setTexture(patrektext);
@@ -2070,21 +2070,21 @@ void chooseplayer(bool& endstart, int& countperson, bool& isedit, bool& isdelete
                     }
                     if (selectedIndex == 0) {
                         Hero = 1;
-                        PlayerTex.loadFromFile("HERO1.png");
+                        PlayerTex.loadFromFile("pictures/HERO1.png");
                         endstart = true;
 
                     }
                     else if (selectedIndex == 1 && person[indexuser].players.poor == 1)
                     {
                         Hero = 2;
-                        PlayerTex.loadFromFile("HERO2.png");
+                        PlayerTex.loadFromFile("pictures/HERO2.png");
                         endstart = true;
 
                     }
                     else if (selectedIndex == 2 && person[indexuser].players.patrick == 1)
                     {
                         Hero = 3;
-                        PlayerTex.loadFromFile("HERO3.png");
+                        PlayerTex.loadFromFile("pictures/HERO3.png");
                         endstart = true;
 
                     }
@@ -2204,9 +2204,9 @@ void decide(int n, int indexuser, int countperson, int k, bool& issound,bool isj
     int selectedIndex = 0;
     Sprite Peter, Poor, Patrek;
     Texture petertext, poortext, patrektext;
-    petertext.loadFromFile("HERO1.png");
-    poortext.loadFromFile("HERO2.png");
-    patrektext.loadFromFile("HERO3.png");
+    petertext.loadFromFile("pictures/HERO1.png");
+    poortext.loadFromFile("pictures/HERO2.png");
+    patrektext.loadFromFile("pictures/HERO3.png");
     Peter.setTexture(petertext);
     Poor.setTexture(poortext);
     Patrek.setTexture(patrektext);

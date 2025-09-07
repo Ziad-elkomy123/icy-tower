@@ -262,50 +262,50 @@ int main() {
         }
         
     }
-    numm.loadFromFile("num.png");
-    tapee.loadFromFile("tape.jpg");
-    StartTex.loadFromFile("startplay.jpg");
-    squaretex.loadFromFile("square.jpg");
-    lock.loadFromFile("lockk.png");
-    lock2.loadFromFile("lockk2.png");
-    truetex.loadFromFile("squaretrue.png");
-    Hand.loadFromFile("hand.png");
-    Profile.loadFromFile("profile.jpg");
-    ChooseTex.loadFromFile("choose.png");
-    buyy.loadFromFile("buy.png");
-    clockTex.loadFromFile("clock.png");
-    clockwiseTex.loadFromFile("clockwise.png");
-    BackgroundTex.loadFromFile("background.jpg");
-    rightwallTex1.loadFromFile("rightwall1.jpg");
-    leftwallTex1.loadFromFile("leftwall1.jpg");
-    BackgroundTex2.loadFromFile("background2.jpg");
-    rightwallTex2.loadFromFile("rightwall2.jpg");
-    leftwallTex2.loadFromFile("leftwall2.jpg");
-    BackgroundTex3.loadFromFile("background3.jpg");
-    rightwallTex3.loadFromFile("rightwall3.jpg");
-    leftwallTex3.loadFromFile("leftwall3.jpg");
-    BackgroundTex4.loadFromFile("background4.jpg");
-    rightwallTex4.loadFromFile("rightwall4.jpg");
-    leftwallTex4.loadFromFile("leftwall4.jpg");
-    BackgroundTex5.loadFromFile("background5.jpg");
-    rightwallTex5.loadFromFile("rightwall5.jpg");
-    leftwallTex5.loadFromFile("leftwall5.jpg");
-    gold.loadFromFile("gold.png");
-    silver.loadFromFile("silver.png");
-    bronze.loadFromFile("pronze.png");
-    StairTex1.loadFromFile("stair.jpg");
-    StairTex2.loadFromFile("stair2.png");
-    StairTex3.loadFromFile("stair3.png");
-    StairTex4.loadFromFile("stair4.jpg");
-    StairTex5.loadFromFile("stair5.png");
-    Rtthrone.loadFromFile("righttriangle.png");
-    Lfthrone.loadFromFile("lefttriangle.png");
-    Bomb.loadFromFile("bombs.png");
-    Coin.loadFromFile("coin.png");
-    PipeTex.loadFromFile("pipe.png");
-    barTex.loadFromFile("fillbar.png");
-    Coin.loadFromFile("coin.png");
-    Warning.loadFromFile("warning.png");
+    numm.loadFromFile("pictures/num.png");
+    tapee.loadFromFile("pictures/tape.jpg");
+    StartTex.loadFromFile("pictures/startplay.jpg");
+    squaretex.loadFromFile("pictures/square.jpg");
+    lock.loadFromFile("pictures/lockk.png");
+    lock2.loadFromFile("pictures/lockk2.png");
+    truetex.loadFromFile("pictures/squaretrue.png");
+    Hand.loadFromFile("pictures/hand.png");
+    Profile.loadFromFile("pictures/profile.jpg");
+    ChooseTex.loadFromFile("pictures/choose.png");
+    buyy.loadFromFile("pictures/buy.png");
+    clockTex.loadFromFile("pictures/clock.png");
+    clockwiseTex.loadFromFile("picutres/clockwise.png");
+    BackgroundTex.loadFromFile("pictures/background.jpg");
+    rightwallTex1.loadFromFile("pictures/rightwall1.jpg");
+    leftwallTex1.loadFromFile("pictures/leftwall1.jpg");
+    BackgroundTex2.loadFromFile("pictures/background2.jpg");
+    rightwallTex2.loadFromFile("pictures/rightwall2.jpg");
+    leftwallTex2.loadFromFile("pictures/leftwall2.jpg");
+    BackgroundTex3.loadFromFile("pictures/background3.jpg");
+    rightwallTex3.loadFromFile("pictures/rightwall3.jpg");
+    leftwallTex3.loadFromFile("pictures/leftwall3.jpg");
+    BackgroundTex4.loadFromFile("pictures/background4.jpg");
+    rightwallTex4.loadFromFile("pictures/rightwall4.jpg");
+    leftwallTex4.loadFromFile("pictures/leftwall4.jpg");
+    BackgroundTex5.loadFromFile("pictures/background5.jpg");
+    rightwallTex5.loadFromFile("pictures/rightwall5.jpg");
+    leftwallTex5.loadFromFile("pictures/leftwall5.jpg");
+    gold.loadFromFile("pictures/gold.png");
+    silver.loadFromFile("pictures/silver.png");
+    bronze.loadFromFile("pictures/pronze.png");
+    StairTex1.loadFromFile("pictures/stair.jpg");
+    StairTex2.loadFromFile("pictures/stair2.png");
+    StairTex3.loadFromFile("pictures/stair3.png");
+    StairTex4.loadFromFile("pictures/stair4.jpg");
+    StairTex5.loadFromFile("pictures/stair5.png");
+    Rtthrone.loadFromFile("pictures/righttriangle.png");
+    Lfthrone.loadFromFile("pictures/lefttriangle.png");
+    Bomb.loadFromFile("pictures/bombs.png");
+    Coin.loadFromFile("pictures/coin.png");
+    PipeTex.loadFromFile("pictures/pipe.png");
+    barTex.loadFromFile("pictures/fillbar.png");
+    Coin.loadFromFile("pictures/coin.png");
+    Warning.loadFromFile("pictures/warning.png");
     
     Pipe.setTexture(PipeTex);
     barfill.setTexture(barTex);
@@ -457,8 +457,8 @@ int main() {
 
     barfill.setOrigin(0, 1536);
     ////////Text
-    font.loadFromFile("font.ttf");
-    font2.loadFromFile("font2.ttf");
+    font.loadFromFile("fonts/font.ttf");
+    font2.loadFromFile("fonts/font2.ttf");
     score.setFont(font);
     score.setCharacterSize(60);
     score.setPosition(30, 900);
@@ -569,13 +569,13 @@ int main() {
     
     
     /////////////////////////////////////////////////////
-    jump.loadFromFile("jump.wav");
+    jump.loadFromFile("sounds/jump.wav");
     jumpsound.setBuffer(jump);
     jumpsound.setVolume(500.0f);
 
 
 
-    menu.loadFromFile("sound main menu.wav");
+    menu.loadFromFile("sounds/sound main menu.wav");
     menusound.setBuffer(menu);
     menusound.setVolume(50.0f);
 
@@ -586,91 +586,91 @@ int main() {
 
 
 
-    backgroundbuffer.loadFromFile("background.wav");
+    backgroundbuffer.loadFromFile("sounds/background.wav");
     backgroundsound.setBuffer(backgroundbuffer);
     backgroundsound.setVolume(50.0f);
 
 
-    hurryup.loadFromFile("hurryup.wav");
+    hurryup.loadFromFile("sounds/hurryup.wav");
     hurryupsound.setBuffer(hurryup);
     hurryupsound.setVolume(800.0f);
 
 
-    good.loadFromFile("good.wav");
+    good.loadFromFile("sounds/good.wav");
     goodsound.setBuffer(good);
     goodsound.setVolume(800.0f);
 
-    great.loadFromFile("great.wav");
+    great.loadFromFile("sounds/great.wav");
     greatsound.setBuffer(great);
     greatsound.setVolume(800.0f);
 
-    getcoin.loadFromFile("get coin.wav");
+    getcoin.loadFromFile("sounds/get coin.wav");
     getcoinsound.setBuffer(getcoin);
     getcoinsound.setVolume(1000.0f);
 
-    amazing.loadFromFile("amazing.wav");
+    amazing.loadFromFile("sounds/amazing.wav");
     amazingsound.setBuffer(amazing);
     amazingsound.setVolume(800.0f);
 
 
-    super.loadFromFile("super.wav");
+    super.loadFromFile("sounds/super.wav");
     supersound.setBuffer(super);
     supersound.setVolume(800.0f);
 
-    ring.loadFromFile("ring.wav");
+    ring.loadFromFile("sounds/ring.wav");
     ringsound.setBuffer(ring);
     ringsound.setVolume(10000.0f);
 
-    menuchange.loadFromFile("menu_change.wav");
+    menuchange.loadFromFile("sounds/menu_change.wav");
     changesound.setBuffer(menuchange);
     changesound.setVolume(100.0f);
 
-    menuchoose.loadFromFile("menu_choose.wav");
+    menuchoose.loadFromFile("sounds/menu_choose.wav");
     choosesound.setBuffer(menuchoose);
     choosesound.setVolume(50000.0f);
 
-    jumppoor.loadFromFile("jump vini.wav");
+    jumppoor.loadFromFile("sounds/jump vini.wav");
     jumppoorsound.setBuffer(jumppoor);
     jumppoorsound.setVolume(500.0f);
 
-    jumppatrick.loadFromFile("jump blonde.wav");
+    jumppatrick.loadFromFile("sounds/jump blonde.wav");
     jumppatricksound.setBuffer(jumppatrick);
     jumppatricksound.setVolume(500.0f);
 
-    jumppatrickpower.loadFromFile("jump blonde power.wav");
+    jumppatrickpower.loadFromFile("sounds/jump blonde power.wav");
     jumppatrickpowersound.setBuffer(jumppatrickpower);
     jumppatrickpowersound.setVolume(500.0f);
 
-    startpatrick.loadFromFile("start patrick.wav");
+    startpatrick.loadFromFile("sounds/start patrick.wav");
     startpatricksound.setBuffer(startpatrick);
     startpatricksound.setVolume(500.0f);
 
-    startpoor.loadFromFile("start poor.wav");
+    startpoor.loadFromFile("sounds/start poor.wav");
     startpoorsound.setBuffer(startpoor);
     startpoorsound.setVolume(500.0f);
 
-    Warningbuf.loadFromFile("warning.wav");
+    Warningbuf.loadFromFile("sounds/warning.wav");
     warningsound.setBuffer(Warningbuf);
     warningsound.setVolume(500.0f);
 
 
-    buycharacter.loadFromFile("buy character.wav");
+    buycharacter.loadFromFile("sounds/buy character.wav");
     buycharactersound.setBuffer(buycharacter);
     buycharactersound.setVolume(800.0f);
 
-    flip.loadFromFile("flip.wav");
+    flip.loadFromFile("sounds/flip.wav");
     flipsound.setBuffer(flip);
     flipsound.setVolume(500.0f);
 
-    flippoor.loadFromFile("flip poor.wav");
+    flippoor.loadFromFile("sounds/flip poor.wav");
     flippoorsound.setBuffer(flippoor);
     flippoorsound.setVolume(500.0f);
 
-    flippatrick.loadFromFile("flip patrick.wav");
+    flippatrick.loadFromFile("sounds/flip patrick.wav");
     flippatricksound.setBuffer(flippatrick);
     flippatricksound.setVolume(500.0f);
 
-    gameoverbuffer.loadFromFile("gameover.wav");
+    gameoverbuffer.loadFromFile("sounds/gameover.wav");
     gameoversound.setBuffer(gameoverbuffer);
     gameoversound.setVolume(500.0f);
 

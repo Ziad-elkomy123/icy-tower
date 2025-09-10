@@ -760,7 +760,7 @@ string inputuser()
 
     string name = "";
     Font font;
-    font.loadFromFile("font.ttf");
+    font.loadFromFile("fonts/font.ttf");
     Text enter("Enter the profile name : ", font);
     enter.setFillColor(Color::White);
     enter.setCharacterSize(100);
@@ -1820,7 +1820,7 @@ void setting(bool& issound, bool& ismusic,bool &iskeyboard,bool &isjoystick)
                         hand.setPosition(330, 185 * selectedIndex + 105);
                     }
                 }
-                if (event.key.code == Keyboard::Escape || (isjoystick && Joystick::isButtonPressed(0, 4)))
+                else if (event.key.code == Keyboard::Escape || (isjoystick && Joystick::isButtonPressed(0, 4)))
                 {
                     exit = true;
                 }
@@ -2102,7 +2102,7 @@ void chooseplayer(bool& endstart, int& countperson, bool& isedit, bool& isdelete
 
                 }
 
-                else if (event.key.code == Keyboard::Escape || (isjoystick && Joystick::isButtonPressed(0, 2)))
+                else if (event.key.code == Keyboard::Escape || (isjoystick && Joystick::isButtonPressed(0, 4)))
                 {
                     
                     exit = true;
@@ -2501,6 +2501,7 @@ void showStartScreen(bool& end, int& countperson, bool& isedit, bool& isdelete, 
         float y = Joystick::getAxisPosition(0, Joystick::Y);
         Event event;
         while (window.pollEvent(event)) {
+            float y = Joystick::getAxisPosition(0, Joystick::Y);
             if (event.type == Event::Closed)
                 window.close();
             else if (event.type == Event::KeyPressed||event.type==Event::JoystickMoved||event.type==Event::JoystickButtonPressed) {

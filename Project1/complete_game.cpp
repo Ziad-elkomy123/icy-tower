@@ -30,7 +30,7 @@ int totalcombo = 0;
 int difficultyIndex = 2;
 bool istouchleftwall = true, istouchrightwall = true;
 bool isstart = 1;
-
+bool ispower = false;
 enum PlayerState { Stand, Left, Right, Jump, Jump_Right, Jump_Left, Fall_Right, Fall_Left, Super_Jump };
 PlayerState CurrentState = Stand;
 
@@ -2716,6 +2716,10 @@ void movement(double jumpBoost, double playerSpeed, double& velocityX, double& v
         velocityX = playerSpeed;
         isMoving = true;
     }
+    else
+    {
+        isMoving = false;
+    }
     if (isMoving) {
         runtime = runclock.getElapsedTime().asSeconds();
         ddistance = abs(velocityX) * runtime;
@@ -2941,7 +2945,7 @@ void Animation(double& velocityY,double &velocityX, int& Hero, bool& onGround, d
     float x;
     x = Joystick::getAxisPosition(0, Joystick::X);
 
-    if ((abs(maxJumpPower - jumppower) < 0.2) && (!onGround) && (Keyboard::isKeyPressed(Keyboard::V))) {
+    if (ispower && !onGround &&velocityY<=0) {
         flip = true;
         if (Hero == 1) {
             if (!issound) {
@@ -3480,10 +3484,11 @@ void Draw(bool& shake, int& nlevel, int& nextscores, int& prevscores, int& bound
     float cameraY = camera.getCenter().y;
     if ((nextscores - prevscores) / 10 >= 4)
     {
+        ispower = true;
         combo += (nextscores - prevscores) / 10;
         Bar.restart();
         txcombo.setString(to_string(combo));
-        isstart = true;
+        isstart = false;
     }
     if (Bar.getElapsedTime().asSeconds() <= 3)
         Fillpercent = 3 - Bar.getElapsedTime().asSeconds();
@@ -3644,12 +3649,12 @@ void Draw(bool& shake, int& nlevel, int& nextscores, int& prevscores, int& bound
         window.draw(num);
         window.draw(txcombo);
         window.draw(barfill);
-        window.draw(Pipe);
     }
     else
     {
         totalcombo += (combo * combo);
         combo = 0;
+        ispower = false;
     }
 
     if (iscontinue)
@@ -3958,6 +3963,7 @@ void gameLoop(int &countperson)
                         player.getGlobalBounds().intersects(lfthrone.getGlobalBounds())) && isthrone) ||
                     (player.getGlobalBounds().intersects(bomb.getGlobalBounds()) && isbomb))
                 {
+                    gameoversound.play();
                     bool issorry = false;
                     bool iscontinue = false;
                     bool isagain = false;
@@ -3967,6 +3973,7 @@ void gameLoop(int &countperson)
                     backgroundsound.stop();
                     while (window.isOpen())
                     {
+
                         showGameOver(indexuser, issound, ismusic, nextscores, prevscores, bonus, countcoins, countperson, isquit, isgameover,
                             issorry,iscontinue,currentnumber,selectedIndex,isjoystick);
                         if (isquit)
@@ -4155,7 +4162,6 @@ void showGameOver(int indexuser,bool issound,bool ismusic,int nextscores,int pre
     amazingsound.stop();
     greatsound.stop();
     warningsound.stop();
-    gameoversound.play();
     ismoving = false;
 
     if (!issound)
